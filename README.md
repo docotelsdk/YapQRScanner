@@ -11,7 +11,7 @@ Features:
 3. Scanning can be performed in landscape or portrait mode.
 4. Camera is managed in a background thread, for fast startup time.
 
-A sample application is available in [Releases](https://github.com/journeyapps/zxing-android-embedded/releases).
+A sample application is available in [Releases](https://github.com/docotelsdk/YapQRScanner/releases).
 
 By default, Android SDK 19+ is required because of `zxing:core` 3.3.2.
 To support SDK 14+, downgrade `zxing:core` to 3.3.0 -
@@ -109,4 +109,4 @@ integrator.setBarcodeImageEnabled(true);
 integrator.initiateScan();
 ```
 
-
+[2]: https://github.com/zxing/zxing/
