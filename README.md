@@ -19,7 +19,7 @@ see [instructions](#adding-aar-dependency-with-gradle).
 
 ## Adding aar dependency with Gradle
 
-From version 3.6.0, only Android SDK 19+ is supported by default.
+Only Android SDK 19+ is supported by default.
 
 Add the following to your `build.gradle` file:
 
