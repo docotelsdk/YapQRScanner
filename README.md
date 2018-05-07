@@ -86,10 +86,12 @@ Use from a Fragment:
 
 ```groovy
 IntentIntegrator.forFragment(this).initiateScan(); // `this` is the current Fragment
+```
 
 // If you're using the support library, use IntentIntegrator.forSupportFragment(this) instead.
 Customize options:
 
+```groovy
 IntentIntegrator integrator = new IntentIntegrator(this);
 integrator.setDesiredBarcodeFormats(IntentIntegrator.ONE_D_CODE_TYPES);
 integrator.setPrompt("Scan a barcode");
