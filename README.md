@@ -1,7 +1,7 @@
 # YapQRScanner
 Barcode scanning library for Android, using [ZXing][2] for decoding.
 
-The project is loosely based on the [ZXing Android Barcode Scanner application][2], but is not affiliated with the official ZXing project.
+The project is loosely based on the [ZXing Android Barcode Scanner application][3], but is not affiliated with the official ZXing project.
 
 Features:
 
@@ -104,7 +104,7 @@ integrator.initiateScan();
 
 [1]: http://journeyapps.com
 [2]: https://github.com/zxing/zxing/
-[3]: https://github.com/zxing/zxing/wiki/Scanning-Via-Intent
+[3]: https://github.com/journeyapps/zxing-android-embedded
 [4]: https://github.com/journeyapps/zxing-android-embedded/blob/2.x/README.md
 [5]: zxing-android-embedded/src/com/google/zxing/integration/android/IntentIntegrator.java
 [7]: http://www.apache.org/licenses/LICENSE-2.0
