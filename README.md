@@ -18,6 +18,7 @@ Only Android SDK 19+ is supported by default.
 
 Add the following to your build.gradle file:
 
+```groovy
 repositories {
     jcenter()
 }
@@ -30,8 +31,11 @@ dependencies {
 android {
     buildToolsVersion '27.0.3' // Older versions may give compile errors
 }
+```
+
 For Android 14+ support, downgrade zxing:core to 3.3.0 or earlier:
 
+```groovy
 repositories {
     jcenter()
 }
@@ -45,18 +49,23 @@ dependencies {
 android {
     buildToolsVersion '27.0.3' // Older versions may give compile errors
 }
+```
+
 ## Hardware Acceleration
 Hardware accelation is required since TextureView is used.
 
 Make sure it is enabled in your manifest file:
 
+```groovy
     <application android:hardwareAccelerated="true" ... >
+```
+
 ## Usage with IntentIntegrator
 Launch the intent with the default options:
 
 new IntentIntegrator(this).initiateScan(); // `this` is the current Activity
 
-
+```groovy
 // Get the results:
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -71,8 +80,11 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
     }
 }
+```
+
 Use from a Fragment:
 
+```groovy
 IntentIntegrator.forFragment(this).initiateScan(); // `this` is the current Fragment
 
 // If you're using the support library, use IntentIntegrator.forSupportFragment(this) instead.
@@ -85,3 +97,4 @@ integrator.setCameraId(0);  // Use a specific camera of the device
 integrator.setBeepEnabled(false);
 integrator.setBarcodeImageEnabled(true);
 integrator.initiateScan();
+```
