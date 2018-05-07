@@ -101,6 +101,15 @@ integrator.setBarcodeImageEnabled(true);
 integrator.initiateScan();
 ```
 
+## Sample show data
+
+```groovy
+MerchantQr merchantQr = new MerchantQr(lastText);      // "lastText" is capture string from QR image
+txtMerchantName.setText(merchantQr.getMerchantName());
+
+txtMvisaPan.setText("Visa Pan : "+merchantQr.getVisa_id());
+
+```
 
 [1]: http://journeyapps.com
 [2]: https://github.com/zxing/zxing/
