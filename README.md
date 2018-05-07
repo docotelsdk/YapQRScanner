@@ -63,9 +63,9 @@ Make sure it is enabled in your manifest file:
 ## Usage with IntentIntegrator
 Launch the intent with the default options:
 
+```groovy
 new IntentIntegrator(this).initiateScan(); // `this` is the current Activity
 
-```groovy
 // Get the results:
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
