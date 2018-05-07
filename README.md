@@ -1,7 +1,8 @@
 # YapQRScanner
 Barcode scanning library for Android, using ZXing for decoding.
 
-The project is loosely based on the ZXing Android Barcode Scanner application, but is not affiliated with the official ZXing project.
+The project is loosely based on the ZXing Android Embedded, but is not affiliated with the official ZXing project.
+https://github.com/journeyapps/zxing-android-embedded
 
 Features:
 
