@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\BELAJAR ANDROID\\LIBRARY\\DOCO\\YapQRScanner\\scanner\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_zxing_capture.xml.flat",
+        "source": "E:\\BELAJAR ANDROID\\LIBRARY\\DOCO\\YapQRScanner\\scanner\\build\\intermediates\\bundles\\debug\\res\\layout\\zxing_capture.xml"
+    },
+    {
+        "merged": "E:\\BELAJAR ANDROID\\LIBRARY\\DOCO\\YapQRScanner\\scanner\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_zxing_barcode_scanner.xml.flat",
+        "source": "E:\\BELAJAR ANDROID\\LIBRARY\\DOCO\\YapQRScanner\\scanner\\build\\intermediates\\bundles\\debug\\res\\layout\\zxing_barcode_scanner.xml"
+    },
+    {
+        "merged": "E:\\BELAJAR ANDROID\\LIBRARY\\DOCO\\YapQRScanner\\scanner\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_zxing_beep.ogg.flat",
+        "source": "E:\\BELAJAR ANDROID\\LIBRARY\\DOCO\\YapQRScanner\\scanner\\build\\intermediates\\bundles\\debug\\res\\raw\\zxing_beep.ogg"
+    }
+]
