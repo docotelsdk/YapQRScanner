@@ -45,6 +45,22 @@ public class MerchantQr {
     private boolean isAspii;
     private List<Bank> bankList = new ArrayList<>();
 
+    public boolean isAspii() {
+        return isAspii;
+    }
+
+    public void setAspii(boolean aspii) {
+        isAspii = aspii;
+    }
+
+    public List<Bank> getBankList() {
+        return bankList;
+    }
+
+    public void setBankList(List<Bank> bankList) {
+        this.bankList = bankList;
+    }
+
     public String getQr() {
         return qr;
     }
