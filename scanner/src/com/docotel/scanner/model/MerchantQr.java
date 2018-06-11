@@ -1,8 +1,6 @@
 package com.docotel.scanner.model;
 
 import android.text.TextUtils;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +42,8 @@ public class MerchantQr {
     private String crc = "";
     private boolean isAdditionalField = false;
     private String network = "";
-    private boolean isAspii = false;
+    private boolean isAspii;
+    private List<Bank> bankList = new ArrayList<>();
 
     public String getQr() {
         return qr;
@@ -279,7 +278,8 @@ public class MerchantQr {
             if (validCrc.length() == 1) validCrc = "000" + validCrc;
             LoggerHelper.info(validCrc);
             if (validCrc.equals(crc)) parseByTag();
-        } catch (Exception ignored) { }
+        } catch (Exception ignored) {
+        }
     }
 
     private List<MerchantQrTag> getFields() {
@@ -382,14 +382,6 @@ public class MerchantQr {
         this.merchantType = merchantType;
     }
 
-    public boolean isAspii() {
-        return isAspii;
-    }
-
-    public void setAspii(boolean aspii) {
-        isAspii = aspii;
-    }
-
     public void setDefaultId(MerchantNetwork network) {
         switch (network) {
             case VISA:
@@ -460,18 +452,121 @@ public class MerchantQr {
                 referenceId = value;
                 break;
             case "26":
-                if(value.length()<=16) {
+                if (value.length() <= 16) {
                     debitId = value;
                 } else {
                     merchantData = value;
                     isAspii = true;
+                    readMerchantData();
                 }
                 break;
+            case "27":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "28":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "29":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "30":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "31":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "32":
+                merchantData = value;
+                readMerchantData();
+                break;
             case "33":
-                emoneyId = value;
+                if(isAspii){
+                    merchantData = value;
+                    readMerchantData();
+                } else {
+                    emoneyId = value;
+                }
+                break;
+            case "34":
+                merchantData = value;
+                readMerchantData();
                 break;
             case "35":
-                merchantCode = value;
+                if(isAspii){
+                    merchantData = value;
+                    readMerchantData();
+                } else {
+                    merchantCode = value;
+                }
+                break;
+            case "36":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "37":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "38":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "39":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "40":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "41":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "42":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "43":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "44":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "45":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "46":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "47":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "48":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "49":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "50":
+                merchantData = value;
+                readMerchantData();
+                break;
+            case "51":
+                merchantData = value;
+                readMerchantData();
                 break;
             case "52":
                 merchantType = value;
@@ -520,7 +615,7 @@ public class MerchantQr {
     private void validate() {
         readAdditionalField();
         readEmoneyCard();
-        if(!merchantData.isEmpty())readMerchantData();
+        if (!merchantData.isEmpty()) readMerchantData();
 //        readDebitCard();
     }
 
@@ -528,7 +623,7 @@ public class MerchantQr {
         MerchantQr additionalField = new MerchantQr(merchantData, true);
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
-            for (MerchantQrTag additionalTag: additionalTags) {
+            for (MerchantQrTag additionalTag : additionalTags) {
                 switch (additionalTag.getTag()) {
                     case "00":
                         domain = additionalTag.getValue();
@@ -541,6 +636,12 @@ public class MerchantQr {
                         tipeMerchant = additionalTag.getValue();
                 }
             }
+            Bank bankModel = new Bank();
+            bankModel.setDomain(domain);
+            bankModel.setNns(dataBank);
+            bankModel.setMerchant_id(additionalMerchant);
+            bankModel.setMcc(tipeMerchant);
+            bankList.add(bankModel);
         }
     }
 
@@ -548,7 +649,7 @@ public class MerchantQr {
         MerchantQr additionalField = new MerchantQr(additionalDataField, true);
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
-            for (MerchantQrTag additionalTag: additionalTags) {
+            for (MerchantQrTag additionalTag : additionalTags) {
                 switch (additionalTag.getTag()) {
                     case "01":
                         billNumber = additionalTag.getValue();
@@ -564,7 +665,7 @@ public class MerchantQr {
         MerchantQr additionalField = new MerchantQr(emoneyId, true);
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
-            for (MerchantQrTag additionalTag: additionalTags) {
+            for (MerchantQrTag additionalTag : additionalTags) {
                 switch (additionalTag.getTag()) {
                     case "01":
                         emoneyId = additionalTag.getValue();
@@ -572,11 +673,12 @@ public class MerchantQr {
             }
         }
     }
+
     private void readDebitCard() {
         MerchantQr additionalField = new MerchantQr(debitId, true);
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
-            for (MerchantQrTag additionalTag: additionalTags) {
+            for (MerchantQrTag additionalTag : additionalTags) {
                 switch (additionalTag.getTag()) {
                     case "01":
                         debitId = additionalTag.getValue();
@@ -589,9 +691,10 @@ public class MerchantQr {
         return isValid;
     }
 
-    public enum QrType { STATIC, DYNAMIC }
+    public enum QrType {STATIC, DYNAMIC}
 
-    private enum Tip { PROMPT, FLAT, PERCENTAGE }
+    private enum Tip {PROMPT, FLAT, PERCENTAGE}
 
-    public enum MerchantNetwork { VISA, MASTERCARD, EMONEY, DEBIT, NEWQR }
+    public enum MerchantNetwork {VISA, MASTERCARD, EMONEY, DEBIT, NEWQR}
 }
+
