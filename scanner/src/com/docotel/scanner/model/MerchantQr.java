@@ -469,6 +469,7 @@ public class MerchantQr {
                 referenceId = value;
                 break;
             case "26":
+                merchantData = "";
                 if (value.length() <= 16) {
                     debitId = value;
                 } else {
@@ -480,42 +481,49 @@ public class MerchantQr {
                 }
                 break;
             case "27":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "28":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "29":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "30":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "31":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "32":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "33":
+                merchantData = "";
                 if (isAspii) {
                     if (value.length() >= 3) {
                         merchantData = value;
@@ -526,12 +534,14 @@ public class MerchantQr {
                 }
                 break;
             case "34":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "35":
+                merchantData = "";
                 if (isAspii) {
                     if (value.length() >= 3) {
                         merchantData = value;
@@ -542,96 +552,112 @@ public class MerchantQr {
                 }
                 break;
             case "36":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "37":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "38":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "39":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "40":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "41":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "42":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "43":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "44":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "45":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "46":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "47":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "48":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "49":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "50":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
                 }
                 break;
             case "51":
+                merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
                     readMerchantData();
@@ -684,7 +710,7 @@ public class MerchantQr {
     private void validate() {
         readAdditionalField();
         readEmoneyCard();
-        readMerchantData();
+//        readMerchantData();
 //        readDebitCard();
     }
 
