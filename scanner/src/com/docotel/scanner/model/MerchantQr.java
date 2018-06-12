@@ -705,6 +705,7 @@ public class MerchantQr {
                         tipeMerchant = additionalTag.getValue();
                 }
             }
+            bankList.clear();
             Bank bankModel = new Bank();
             bankModel.setDomain(domain);
             bankModel.setNns(dataBank);
