@@ -709,8 +709,8 @@ public class MerchantQr {
                         tipeMerchant = additionalTag.getValue();
                         bankModel.setMcc(tipeMerchant);
                 }
-                bankList.add(bankModel);
             }
+            bankList.add(bankModel);
         }
     }
 
