@@ -684,7 +684,7 @@ public class MerchantQr {
     private void validate() {
         readAdditionalField();
         readEmoneyCard();
-        if (!merchantData.isEmpty()) readMerchantData();
+        readMerchantData();
 //        readDebitCard();
     }
 
