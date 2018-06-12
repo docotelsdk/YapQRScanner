@@ -1,6 +1,7 @@
 package com.docotel.scanner.model;
 
 import android.text.TextUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -477,112 +478,162 @@ public class MerchantQr {
                 }
                 break;
             case "27":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "28":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "29":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "30":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "31":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "32":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "33":
-                if(isAspii){
+                if (!value.isEmpty()) {
                     merchantData = value;
                     readMerchantData();
+                }
+                break;
+            case "28":
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
+                break;
+            case "29":
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
+                break;
+            case "30":
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
+                break;
+            case "31":
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
+                break;
+            case "32":
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
+                break;
+            case "33":
+                if (isAspii) {
+                    if (!value.isEmpty()) {
+                        merchantData = value;
+                        readMerchantData();
+                    }
                 } else {
                     emoneyId = value;
                 }
                 break;
             case "34":
-                merchantData = value;
-                readMerchantData();
-                break;
-            case "35":
-                if(isAspii){
+                if (!value.isEmpty()) {
                     merchantData = value;
                     readMerchantData();
+                }
+                break;
+            case "35":
+                if (isAspii) {
+                    if (!value.isEmpty()) {
+                        merchantData = value;
+                        readMerchantData();
+                    }
                 } else {
                     merchantCode = value;
                 }
                 break;
             case "36":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "37":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "38":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "39":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "40":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "41":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "42":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "43":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "44":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "45":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "46":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "47":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "48":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "49":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "50":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "51":
-                merchantData = value;
-                readMerchantData();
+                if (!value.isEmpty()) {
+                    merchantData = value;
+                    readMerchantData();
+                }
                 break;
             case "52":
                 merchantType = value;
