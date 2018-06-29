@@ -40,6 +40,7 @@ public class MerchantQr {
     private String additionalDataField = "";
     private String billNumber = "";
     private String referenceId = "";
+    private String terminalId = "";
     private String crc = "";
     private boolean isAdditionalField = false;
     private String network = "";
@@ -256,6 +257,14 @@ public class MerchantQr {
 
     public void setReferenceId(String referenceId) {
         this.referenceId = referenceId;
+    }
+
+    public String getTerminalId() {
+        return terminalId;
+    }
+
+    public void setTerminalId(String terminalId) {
+        this.terminalId = terminalId;
     }
 
     public boolean isAdditionalField() {
@@ -751,6 +760,8 @@ public class MerchantQr {
                         break;
                     case "05":
                         referenceId = additionalTag.getValue();
+                    case "07":
+                        terminalId = additionalTag.getValue();
                 }
             }
         }
