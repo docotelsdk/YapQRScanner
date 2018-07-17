@@ -686,6 +686,7 @@ public class MerchantQr {
                 break;
             case "55":
                 vTip = value;
+                if (value.equals("01")) tip = Tip.PROMPT;
                 if (value.equals("02")) tip = Tip.FLAT;
                 if (value.equals("03")) tip = Tip.PERCENTAGE;
                 break;
