@@ -64,6 +64,14 @@ public class MerchantQr {
         this.bankList = bankList;
     }
 
+    public List<String> getAcquirers() {
+        return acquirers;
+    }
+
+    public void setAcquirers(List<String> acquirers) {
+        this.acquirers = acquirers;
+    }
+
     public String getQr() {
         return qr;
     }
