@@ -46,6 +46,7 @@ public class MerchantQr {
     private String network = "";
     private boolean isAspii;
     private List<Bank> bankList = new ArrayList<>();
+    private List<String> acquirers = new ArrayList<>();
 
     public boolean isAspii() {
         return isAspii;
@@ -485,7 +486,7 @@ public class MerchantQr {
                     if (value.length() >= 3) {
                         merchantData = value;
                         isAspii = true;
-                        readMerchantData();
+                        readMerchantData("26");
                     }
                 }
                 break;
@@ -493,42 +494,42 @@ public class MerchantQr {
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("27");
                 }
                 break;
             case "28":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("28");
                 }
                 break;
             case "29":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("29");
                 }
                 break;
             case "30":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("30");
                 }
                 break;
             case "31":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("31");
                 }
                 break;
             case "32":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("32");
                 }
                 break;
             case "33":
@@ -536,7 +537,7 @@ public class MerchantQr {
                 if (isAspii) {
                     if (value.length() >= 3) {
                         merchantData = value;
-                        readMerchantData();
+                        readMerchantData("33");
                     }
                 } else {
                     emoneyId = value;
@@ -546,7 +547,7 @@ public class MerchantQr {
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("34");
                 }
                 break;
             case "35":
@@ -554,7 +555,7 @@ public class MerchantQr {
                 if (isAspii) {
                     if (value.length() >= 3) {
                         merchantData = value;
-                        readMerchantData();
+                        readMerchantData("35");
                     }
                 } else {
                     merchantCode = value;
@@ -564,112 +565,112 @@ public class MerchantQr {
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("36");
                 }
                 break;
             case "37":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("37");
                 }
                 break;
             case "38":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("38");
                 }
                 break;
             case "39":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("39");
                 }
                 break;
             case "40":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("40");
                 }
                 break;
             case "41":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("41");
                 }
                 break;
             case "42":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("42");
                 }
                 break;
             case "43":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("43");
                 }
                 break;
             case "44":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("44");
                 }
                 break;
             case "45":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("45");
                 }
                 break;
             case "46":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("46");
                 }
                 break;
             case "47":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("47");
                 }
                 break;
             case "48":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("48");
                 }
                 break;
             case "49":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("49");
                 }
                 break;
             case "50":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("50");
                 }
                 break;
             case "51":
                 merchantData = "";
                 if (value.length() >= 3) {
                     merchantData = value;
-                    readMerchantData();
+                    readMerchantData("51");
                 }
                 break;
             case "52":
@@ -724,7 +725,7 @@ public class MerchantQr {
 //        readDebitCard();
     }
 
-    private void readMerchantData() {
+    private void readMerchantData(String tag) {
         MerchantQr additionalField = new MerchantQr(merchantData, true);
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
@@ -747,6 +748,7 @@ public class MerchantQr {
                 }
             }
             bankList.add(bankModel);
+            acquirers.add(tag+":"+bankModel.toString());
         }
     }
 
