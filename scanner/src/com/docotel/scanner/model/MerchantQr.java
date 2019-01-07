@@ -741,27 +741,31 @@ public class MerchantQr {
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
             Bank bankModel = new Bank();
+            BankData bankDataList = new BankData();
             for (MerchantQrTag additionalTag : additionalTags) {
                 switch (additionalTag.getTag()) {
                     case "00":
                         domain = additionalTag.getValue();
                         bankModel.setDomain(domain);
+                        bankDataList.setAcquirer_domain(domain);
                         break;
                     case "01":
                         dataBank = additionalTag.getValue();
                         bankModel.setNns(dataBank);
+                        bankDataList.setAcquirer_mpan(dataBank);
                     case "02":
                         additionalMerchant = additionalTag.getValue();
                         bankModel.setMerchant_id(additionalMerchant);
+                        bankDataList.setAcquirer_mid(additionalMerchant);
                     case "03":
                         tipeMerchant = additionalTag.getValue();
                         bankModel.setMcc(tipeMerchant);
-                        Log.e("acquirer", bankModel.toString());
+                        bankDataList.setAcquirer_mcriteria(tipeMerchant);
                 }
 
             }
             bankList.add(bankModel);
-            String bankdata = new Gson().toJson(bankModel);
+            String bankdata = new Gson().toJson(bankDataList);
             acquirers.add(tag+":"+bankdata);
         }
     }
