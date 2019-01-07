@@ -1,6 +1,9 @@
 package com.docotel.scanner.model;
 
 import android.text.TextUtils;
+import android.util.Log;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -753,10 +756,13 @@ public class MerchantQr {
                     case "03":
                         tipeMerchant = additionalTag.getValue();
                         bankModel.setMcc(tipeMerchant);
+                        Log.e("acquirer", bankModel.toString());
                 }
+
             }
             bankList.add(bankModel);
-            acquirers.add(tag+":"+bankModel.toString());
+            String bankdata = new Gson().toJson(bankModel);
+            acquirers.add(tag+":"+bankdata);
         }
     }
 
