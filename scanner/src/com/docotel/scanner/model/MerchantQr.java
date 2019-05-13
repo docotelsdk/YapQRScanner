@@ -48,8 +48,7 @@ public class MerchantQr {
     private boolean isAdditionalField = false;
     private String network = "";
     private boolean isAspii;
-    private List<Bank> bankList = new ArrayList<>();
-    private List<String> acquirers = new ArrayList<>();
+    private List<BankData> acquirers = new ArrayList<>();
 
     public boolean isAspii() {
         return isAspii;
@@ -59,19 +58,11 @@ public class MerchantQr {
         isAspii = aspii;
     }
 
-    public List<Bank> getBankList() {
-        return bankList;
-    }
-
-    public void setBankList(List<Bank> bankList) {
-        this.bankList = bankList;
-    }
-
-    public List<String> getAcquirers() {
+    public List<BankData> getAcquirers() {
         return acquirers;
     }
 
-    public void setAcquirers(List<String> acquirers) {
+    public void setAcquirers(List<BankData> acquirers) {
         this.acquirers = acquirers;
     }
 
@@ -762,11 +753,8 @@ public class MerchantQr {
                         bankModel.setMcc(tipeMerchant);
                         bankDataList.setAcquirer_mcriteria(tipeMerchant);
                 }
-
+                acquirers.add(bankDataList);
             }
-            bankList.add(bankModel);
-            String bankdata = new Gson().toJson(bankDataList);
-            acquirers.add(tag+":"+bankdata);
         }
     }
 
