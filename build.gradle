@@ -8,7 +8,7 @@ buildscript {
         maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:3.3.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         
@@ -26,8 +26,8 @@ subprojects {
     version = '1.0.0'
     group = 'com.docotel'
 
-    ext.androidBuildTools = '26.0.2'
-    ext.androidTargetSdk = 25
+    ext.androidBuildTools = '28.0.3'
+    ext.androidTargetSdk = 27
     ext.zxingCore = 'com.google.zxing:core:3.3.2'
 }
 

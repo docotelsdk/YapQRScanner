@@ -48,8 +48,7 @@ public class MerchantQr {
     private boolean isAdditionalField = false;
     private String network = "";
     private boolean isAspii;
-    private List<Bank> bankList = new ArrayList<>();
-    private List<String> acquirers = new ArrayList<>();
+    private List<BankData> acquirers = new ArrayList<>();
 
     public boolean isAspii() {
         return isAspii;
@@ -59,19 +58,11 @@ public class MerchantQr {
         isAspii = aspii;
     }
 
-    public List<Bank> getBankList() {
-        return bankList;
-    }
-
-    public void setBankList(List<Bank> bankList) {
-        this.bankList = bankList;
-    }
-
-    public List<String> getAcquirers() {
+    public List<BankData> getAcquirers() {
         return acquirers;
     }
 
-    public void setAcquirers(List<String> acquirers) {
+    public void setAcquirers(List<BankData> acquirers) {
         this.acquirers = acquirers;
     }
 
@@ -741,32 +732,31 @@ public class MerchantQr {
         List<MerchantQrTag> additionalTags = additionalField.getFields();
         if (additionalTags != null) {
             Bank bankModel = new Bank();
-            BankData bankDataList = new BankData();
             for (MerchantQrTag additionalTag : additionalTags) {
                 switch (additionalTag.getTag()) {
                     case "00":
                         domain = additionalTag.getValue();
                         bankModel.setDomain(domain);
-                        bankDataList.setAcquirer_domain(domain);
                         break;
                     case "01":
                         dataBank = additionalTag.getValue();
                         bankModel.setNns(dataBank);
-                        bankDataList.setAcquirer_mpan(dataBank);
                     case "02":
                         additionalMerchant = additionalTag.getValue();
                         bankModel.setMerchant_id(additionalMerchant);
-                        bankDataList.setAcquirer_mid(additionalMerchant);
                     case "03":
                         tipeMerchant = additionalTag.getValue();
                         bankModel.setMcc(tipeMerchant);
-                        bankDataList.setAcquirer_mcriteria(tipeMerchant);
+                        Log.e("acquirer", bankModel.toString());
                 }
-
+                acquirers.add(bankDataList);
             }
+<<<<<<< HEAD
+=======
             bankList.add(bankModel);
-            String bankdata = new Gson().toJson(bankDataList);
+            String bankdata = new Gson().toJson(bankModel);
             acquirers.add(tag+":"+bankdata);
+>>>>>>> parent of 07f7590... fix 2
         }
     }
 
