@@ -6,7 +6,7 @@ public class DigitValidator implements Validator<DigitValidator.Result> {
 
     private Result result;
 
-    public DigitValidator(String digits, int maxDigit, boolean strict) {
+    public DigitValidator(String digits, int minDigit, int maxDigit, boolean strict) {
         if (digits == null || digits.isEmpty()) {
             result = Result.EMPTY;
             return;
@@ -18,7 +18,7 @@ public class DigitValidator implements Validator<DigitValidator.Result> {
             }
         }
         if (strict) {
-            result = digits.length() == maxDigit ? Result.VALID : Result.INVALID;
+            result = digits.length() >= minDigit ? Result.VALID : Result.INVALID;
         } else {
             result = digits.length() >= maxDigit ? Result.VALID : Result.INVALID;
         }
