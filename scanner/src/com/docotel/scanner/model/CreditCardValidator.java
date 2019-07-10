@@ -3,7 +3,7 @@ package com.docotel.scanner.model;
 public class CreditCardValidator extends DigitValidator {
 
     public CreditCardValidator(String digits, Character separator) {
-        super(digits.replace(separator.toString(), ""), 16, true);
+        super(digits.replace(separator.toString(), ""), 8,16, true);
     }
 
     public static String format(String cardNumber) {
